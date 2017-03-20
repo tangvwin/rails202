@@ -2,30 +2,5 @@
   <h2>新增讨论版</h2>
 
   <hr>
-  <%= form_for @group do |f| %>
-  <% if @group.errors.any?%>
-
-  <div id="error_explanation">
-          <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
-
-  <ul>
-    <% @group.errors.full_messages.each do |msg|%>
-    <li><%= msg %></li>
-    <%end%>
-  </ul>
-</div>
-  <%end%>
-
-  标题
-  <br>
-  <%= f.text_field :title %>
-  <br>
-  叙述
-  <br>
-  <%= f.text_area :description %>
-  <br>
-
-  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-  <% end %>
+  <%= render "form" %>
 </div>
