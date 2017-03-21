@@ -33,6 +33,7 @@ class GroupsController < ApplicationController
 
       def edit
         @group = Group.find(params[:id])
+      end
 
 
 
@@ -54,7 +55,7 @@ class GroupsController < ApplicationController
     def destroy
       @group = Group.find(params[:id])
 
-      
+
       @group.destroy
       flash[:alert] = "Group delete!"
    redirect_to groups_path
